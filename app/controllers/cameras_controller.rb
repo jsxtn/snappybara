@@ -5,11 +5,7 @@ class CamerasController < ApplicationController
   end
 
   def index
-    # @cameras = Cameras.all
-  end
-
-  def show
-    # @camera = Camera.find(params[:id])
+   @cameras = Camera.all
   end
 
   def new
@@ -23,4 +19,15 @@ class CamerasController < ApplicationController
   def update
   end
 
+    #show camera
+    def show
+      @camera = Camera.find(params[:id])
+      @user = User.find(@camera.user_id)
+    end
+
+    private
+
+    def camera_params
+      params.require(:camera).permit(:title, :description, :price, :user_id)
+    end
 end
