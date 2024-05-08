@@ -5,11 +5,7 @@ class CamerasController < ApplicationController
   end
 
   def index
-    # @cameras = Cameras.all
-  end
-
-  def show
-    # @camera = Camera.find(params[:id])
+   @cameras = Camera.all
   end
 
   def new
@@ -27,8 +23,18 @@ class CamerasController < ApplicationController
   def update
   end
 
-  def camera_params
-    params.require(:camera).permit(:title, :description, :price)
-  end
+    #show camera
+    def show
+      @camera = Camera.find(params[:id])
+      @user = User.find(@camera.user_id)
+    end
 
+    private
+
+    def camera_params
+      params.require(:camera).permit(:title, :description, :price, :user_id)
+    end
 end
+
+# upload image code for cloudinary (controller): result = Cloudinary::Uploader.upload("path/to/your/image.jpg")
+# display image code for cloudinary (page): <%= cl_image_tag("your_image_public_id", width: 400, height: 300, crop: :fill) %>
