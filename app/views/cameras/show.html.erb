@@ -1,4 +1,4 @@
-<div class = container>
+<div class = "show-container">
   <h1>Here are details for "<%= @camera.title %>"</h1>
 
 <h2>Title:</h2> <%= @camera.title %>
@@ -7,11 +7,8 @@
 <h2>Rented by:</h2>
   <%= @user.first_name %>
 
-
-<div class = container>
-
-<button type="button" class="btn btn-dark"><%= link_to "Back to Cameras", cameras_path%></button>
-<button type="button" class="btn btn-dark"><%= link_to "Rent this Camera out", cameras_path%></button>
-
-</div>
+  <div>
+    <button type="button" class="btn btn-dark"><%= link_to "Back to Cameras", cameras_path%></button>
+    <button type="button" class="btn btn-dark"><%= link_to "Rent this Camera out", cameras_path%></button>
+  </div>
 </div>
