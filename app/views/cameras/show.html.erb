@@ -4,11 +4,36 @@
 <h2>Title:</h2> <%= @camera.title %>
 <h2>Description:</h2> <%= @camera.description %>
 <h2>Price:</h2> <%= @camera.price %>
-<h2>Rented by:</h2>
+<h2>Owned by:</h2>
   <%= @user.first_name %>
 
   <div>
-    <button type="button" class="btn btn-dark"><%= link_to "Back to Cameras", cameras_path%></button>
-    <button type="button" class="btn btn-dark"><%= link_to "Rent this Camera out", cameras_path%></button>
+
+    <div data-controller="toggle" class="mt-5">
+      <button class="btn btn-outline-primary">
+        <%= link_to "Back to Cameras", cameras_path%>
+      </button>
+      <%# <%= render "form", monument: @monument %>
+
+      <button class="btn btn-outline-primary">
+        <%= link_to "Rent out this camera", cameras_path%>
+         <%# <%= render "form", booking: @booking %>
+        </button>
+
+      <%# <%= render "form", monument: @monument %>
+
+      <button class="btn btn-outline-primary">
+          <%= link_to "Edit this listing", cameras_path%>
+      </button>
+
+      <%# <%= render "form", monument: @monument %>
+    </div>
+
   </div>
 </div>
+
+<%# <%= cl_image_tag("canon_5d_mkiv_xgj7xz", width: 300, height: 300, crop: :fill) %>
+
+<%= cl_image_tag @camera.photo.key, height: 600, width: 600, crop: :fill %>
+
+<%# add image, booking, edit, "add equipment" %>

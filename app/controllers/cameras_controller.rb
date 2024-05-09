@@ -23,16 +23,16 @@ skip_before_action :authenticate_user!, only: [:home, :index, :show]
   def update
   end
 
-    #show camera
     def show
       @camera = Camera.find(params[:id])
       @user = User.find(@camera.user_id)
+      @booking = Booking.new
     end
 
     private
 
     def camera_params
-      params.require(:camera).permit(:title, :description, :price, :user_id)
+      params.require(:camera).permit(:title, :description, :price, :user_id, :photo)
     end
 end
 
