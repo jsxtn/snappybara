@@ -1,5 +1,5 @@
 class CamerasController < ApplicationController
-
+skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def home
   end
@@ -14,7 +14,7 @@ class CamerasController < ApplicationController
 
   def create
     @camera = Camera.new(camera_params)
-    @camera.user_id = 1
+    @camera.user_id = current_user.id
     @camera.save!
     redirect_to camera_path(@camera)
 
