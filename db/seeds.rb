@@ -17,7 +17,7 @@ puts "Creating users..."
 
  hafsah = User.create!(email: "Hafsah@thequeen.com", password: "password", first_name: "Hafsah", last_name: "Queen", user_name: "hafsah", address: "56 Covent Garden, London, WC2E 9DD", phone_number: "077088881234" )
  joshua = User.create!(email: "Joshua@thelegend.com", password: "password", first_name: "Joshua", last_name: "Legend", user_name: "jushua", address: "65 Liverpool street, London, EC2M 7QN", phone_number: "07701010101" )
- tony = User.create!(email: "Tony@theteamplayer.com", password: "password", first_name: "Tony", last_name: "Teamplayer", user_name: "tony", address: "78 Nottinghill Gate, London, W11 1PG", phone_number: "077000000000" )
+ tony = User.create!(email: "Tony@theteamplayer.com", password: "password", first_name: "Tony", last_name: "Teamplayer", user_name: "tony", address: "78 Notting Hill Gate, London, W11 1PG", phone_number: "077000000000" )
 
 puts "Created 4 Users"
 
