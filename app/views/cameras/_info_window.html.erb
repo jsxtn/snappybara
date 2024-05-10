@@ -1,0 +1,7 @@
+<h2><%= user.address %></h2>
+
+<ul>
+  <% cameras.each do |camera| %>
+    <li><%= link_to camera.title, camera_path(camera) %></li>
+  <% end %>
+</ul>
