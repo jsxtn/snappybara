@@ -1,10 +1,68 @@
-<div class="text-center mt-5">
-<%= cl_image_tag("snappybara_logo_sml_qee9u4", width: 575, height: 200, crop: :fill) %>
-  <h1 class = "mt-5">Welcome to SnappyBara!</h1>
-  <p>RENT A CAMERA</p>
+<div class="text-center mt-0">
+<!-- ======= Video Hero Section ======= -->
+    <%# <section id="hero" class="container-fluid d-flex align-items-center justify-content-center">
+        <video autoplay muted loop id="myVideo">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-close-shot-photographic-equipment-44051-large.mp4" type="video/mp4">
+        </video>
+        <div class="container-fluid position-absolute justify-content-center" data-aos="fade-up" data-aos-delay="500">
+            <%= cl_image_tag("snappybara_logo_sml_qee9u4", width: 800, height: 280, crop: :fill) %>
+        <%# </div>
+    </section> %>
+<!-- ======= End of Video Hero Section ======= -->
 
-  <button type="button" class="btn btn-dark"><%= link_to "Take me to cameras", cameras_path%></button>
+<!-- ======= Static Hero ======= -->
+<div class="container-fluid px-4 py-5 my-5 text-center">
+  <div class="mt-3 mb-5">
+    <%= cl_image_tag("snappybara_logo_sml2_jlr703", width: 900, height: 300, crop: :fill) %>
+  </div>
+        <div class="lc-block mb-4">
+            <div editable="rich">
+                <h2 class="display-2 fw-bold">Step up your <span class="text-primary">photo game</span> without breaking the bank</h2>
+            </div>
+        </div>
+        <div class="lc-block col-lg-6 mx-auto mb-5">
+            <div editable="rich">
+
+                <p class="lead">Rent camera gear from people in your area and cure your Gear Acquisition Syndrome!</p>
+            </div>
+        </div>
+
+<div class=" text-center container h-100">
+ <form method="POST" action="jq.php">
+  <div class="d-flex justify-content-center h-100">
+   <div class="searchbar">
+      <input class="search_input" type="text" name="" placeholder="Search...">
+      <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+    </div>
+  </div>
+  </form>
 </div>
+
+        <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-center mb-5"> <button class="btn btn-primary btn-lg px-4 gap-3" href="#" role="button"><%= link_to "Take me to cameras", cameras_path%></button>
+            <a class="btn btn-outline-secondary btn-lg px-4" href="#" role="button">Learn more</a>
+        </div>
+        <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <img class="img-fluid" src="https://res.cloudinary.com/dopxbkgda/image/upload/fl_preserve_transparency/v1715307851/snappybara_illustration2_yqagpj.jpg?_s=public-apps" width="" height="783" srcset="" sizes="" alt="">
+        </div>
+    </div>
+<!-- ======= End of Static Hero ======= -->
+
+   <%# snappybara logo in body %>
+   <%# <%= cl_image_tag("snappybara_logo_sml_qee9u4", width: 575, height: 200, crop: :fill) %>
+  <%# <div class="img-fluid mt-3 mb-5">
+  <%= cl_image_tag("snappybara_logo_sml_qee9u4", width: 900, height: 300, crop: :fill) %>
+  <%# </div> %>
+
+<%# original html %>
+  <%# <div class= "container-s">
+  <h1 class = "mt-5">Rent photo/video gear in your area and cure your GAS*</h1>
+  <p>*(Gear Acquisition Syndrome)</p>
+
+  <button type="button" class="btn btn-warning"><%= link_to "Take me to cameras", cameras_path%></button>
+  </div>
+</div> %>
+<%# end of original html %>
+
 <%#
 <!-- test stuff -->
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
