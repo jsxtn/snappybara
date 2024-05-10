@@ -32,6 +32,11 @@
   </div>
 </div>
 
+<div data-controller="toggle" class="mt-5">
+  <button class="btn btn-outline-primary">Book this camera</button>
+  <%= render "form", booking: @booking %>
+</div>
+
 <%# <%= cl_image_tag("canon_5d_mkiv_xgj7xz", width: 300, height: 300, crop: :fill) %>
 
 <%= cl_image_tag @camera.photo.key, height: 600, width: 600, crop: :fill %>
