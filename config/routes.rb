@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   resources :cameras, except: [:update]
   resources :bookings, only: [:create, :new, :edit]
   resources :reviews, only: [:new]
+  resources :users, only: [:show]
 end
