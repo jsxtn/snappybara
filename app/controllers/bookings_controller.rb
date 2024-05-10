@@ -6,13 +6,14 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    # @camera.user_id = current_user.id
+    @booking.user = current_user
+    @booking.camera = Camera.find(params[:booking][:camera_id])
     @booking.save!
-    # redirect_to camera_path(@camera)
+    redirect_to cameras_path
   end
 
 
-  def camera_params
+  def booking_params
     params.require(:booking).permit(:start_date, :end_date)
   end
 end

@@ -5,6 +5,7 @@
 
       <%= form_with model: @booking do |form| %>
 
+        <%= form.hidden_field :camera_id, value: camera.id %>
         <div class="form-group">
           <%= form.label :start_date %>
           <%= form.date_field :start_date %>
@@ -17,7 +18,7 @@
 
         <div class="form-group">
           <%= form.label :price %>
-          <%= form.number_field :price %>
+          <%# <%= form.number_field :price %>
         </div>
         <div class="form-group ">
           <%= form.submit class: "btn btn-dark row justify-content-center mt-3"%>

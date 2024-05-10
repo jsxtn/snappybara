@@ -2,7 +2,11 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="toggle"
 export default class extends Controller {
-  connect() {
-    console.log("Hello from toggle_controller.js")
+  static targets = ["toggleableElement"]
+
+
+  fire() {
+    // console.log(this.toggleableElementTarget)
+    this.toggleableElementTarget.classList.toggle("d-none");
   }
 }
