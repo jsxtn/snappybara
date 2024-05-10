@@ -19,7 +19,9 @@ skip_before_action :authenticate_user!, only: [:home, :index, :show]
     @markers = @users.geocoded.map do |user|
       {
         lat: user.latitude,
-        lng: user.longitude
+        lng: user.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {user: user, cameras: user.cameras}),
+        marker_html: render_to_string(partial: "marker")
       }
     end
     # end of geocoding stuff
