@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.camera = Camera.find(params[:booking][:camera_id])
     @booking.save!
-    redirect_to cameras_path
+    redirect_to user_path(current_user)
   end
 
 
